@@ -13,14 +13,8 @@ class ProductsPage extends Component {
 	}
 
 	handleClick(id) {
-		console.log("this is id " + id);
 		var product = this.state.data[id];
-		console.log("this is cart items " + this.state.cartItems);
-		console.log ("this is product " + product);
-		if(!this.state.cartItems.has(product)) {
-			this.state.cartItems.add(product);
-		}
-		console.log(this.state.cartItems.entries());
+		this.state.cartItems.add(product);
 	}
 
 	render() {
