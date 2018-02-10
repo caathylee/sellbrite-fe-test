@@ -1,5 +1,6 @@
-body {
-  background-color: green; }
+/* Colors */
+header {
+  background-color: #0b00d0 !important; }
 
-p {
-  color: blue; }
+a {
+  color: #fff !important; }
