@@ -9,8 +9,8 @@ class Header extends Component {
 				    <div className="navbar-header">
 				      <a className="navbar-brand" href="/"><img className="logo" src={require("../images/logo.png")} /><span>Cart.ly</span></a>
 				    </div>
-				    <a href="#">Shop</a>
-			      	<a href="#" className="cart">Your Cart <span className="item-count"></span></a>
+				    <a href="#" className="shop-link">Shop</a>
+			      	<a href="#" className="cart-link">Your Cart <span className="item-count">{this.props.handleClick}</span></a>
 				  </div>
 				</nav>
 		    </header>

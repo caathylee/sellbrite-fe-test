@@ -5,7 +5,16 @@ class ShoppingCart extends Component {
 		return (
     	<div className="container-fluid" id="ShoppingCart">
           <div className="container-fluid">
-            <h1>This is ShoppingCart Component</h1>
+            <div className="cart-items">
+            	<h1>This is ShoppingCart Component</h1>
+            	<h2>Your Cart</h2>
+            	<ul>
+            		<li><a href="#">x</a></li>
+            		<li><a href="#">x</a></li>
+            	</ul>
+            	<p>Total <span>$</span></p>
+            	<button>Back</button>
+            </div>
           </div>
       </div>
     	)

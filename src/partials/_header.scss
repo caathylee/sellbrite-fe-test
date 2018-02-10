@@ -1,6 +1,7 @@
 header {
 	background-color: $blue !important;
-
+	height: 45px;
+	position: relative;
 	.logo {
 		width: 20px;
 	}
@@ -8,9 +9,36 @@ header {
 a {
 	color: #fff !important;
 }
+.navbar-brand {
+	position: absolute;
+	top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+	left: 15px;
+}
+.shop-link {
+	position: absolute;
+	top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+	left: 110px;
+}
 
-.cart {
-	float: right;
+.cart-link {
+	position: absolute;
+	top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+	right: 15px;
 	.item-count {
 		width: 20px;
 		height: 20px;
