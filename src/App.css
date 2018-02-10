@@ -6,3 +6,24 @@ header {
 
 a {
   color: #fff !important; }
+
+#products-page .one-item {
+  border: 1px solid #000;
+  width: 24%;
+  float: left;
+  margin-right: 1%;
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px; }
+  #products-page .one-item:nth-of-type(4n) {
+    margin-right: 0 !important; }
+  #products-page .one-item:hover {
+    border: 1px solid #0b00d0; }
+    #products-page .one-item:hover button {
+      border: 1px solid #0b00d0; }
+  #products-page .one-item .product-image {
+    width: 100%; }
+  #products-page .one-item .name {
+    padding-top: 20px; }
+  #products-page .one-item button {
+    margin-bottom: 20px; }
