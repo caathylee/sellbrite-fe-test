@@ -7,7 +7,7 @@ class Header extends Component {
 		    	<nav>
 				  <div className="container-fluid">
 				    <div className="navbar-header">
-				      <a className="navbar-brand" href="/"><span>Cart.ly</span></a>
+				      <a className="navbar-brand" href="/"><img className="logo" src={require("../images/logo.png")} /><span>Cart.ly</span></a>
 				    </div>
 				    <div className="collapse navbar-collapse" id="myNavbar">
 				      <ul className="nav navbar-nav">

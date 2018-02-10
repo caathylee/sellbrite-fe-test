@@ -1,6 +1,8 @@
 /* Colors */
 header {
   background-color: #0b00d0 !important; }
+  header .logo {
+    width: 20px; }
 
 a {
   color: #fff !important; }
