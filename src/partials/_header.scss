@@ -8,3 +8,17 @@ header {
 a {
 	color: #fff !important;
 }
+
+.cart {
+	float: right;
+	.item-count {
+		width: 20px;
+		height: 20px;
+		background: #fff;
+		display: block;
+		float: right;
+		margin-left: 5px;
+		color: $blue;
+		text-align: center;
+	}
+}

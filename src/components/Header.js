@@ -9,12 +9,8 @@ class Header extends Component {
 				    <div className="navbar-header">
 				      <a className="navbar-brand" href="/"><img className="logo" src={require("../images/logo.png")} /><span>Cart.ly</span></a>
 				    </div>
-				    <div className="collapse navbar-collapse" id="myNavbar">
-				      <ul className="nav navbar-nav">
-				      	<li><a href="#">Shop</a></li>
-				      	<li><a href="#">Your Cart</a><span className="cart-item-count"></span></li>
-				      </ul>
-				    </div>
+				    <a href="#">Shop</a>
+			      	<a href="#" className="cart">Your Cart <span className="item-count"></span></a>
 				  </div>
 				</nav>
 		    </header>

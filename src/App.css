@@ -7,6 +7,18 @@ header {
 a {
   color: #fff !important; }
 
+.cart {
+  float: right; }
+  .cart .item-count {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    display: block;
+    float: right;
+    margin-left: 5px;
+    color: #0b00d0;
+    text-align: center; }
+
 #products-page .one-item {
   border: 1px solid #000;
   width: 24%;
