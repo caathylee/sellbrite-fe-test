@@ -12,12 +12,6 @@ class ProductsPage extends Component {
 		this.handleClick = this.handleClick.bind(this);
 	}
 
-	getInitialState = function() {
-		return {
-
-		}
-	}
-
 	handleClick(id) {
 		console.log("this is id " + id);
 		var product = this.state.data[id];
