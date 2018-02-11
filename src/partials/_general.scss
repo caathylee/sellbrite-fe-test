@@ -20,6 +20,12 @@ li {
 button {
 	@extend .transition;
 	border: 2px solid $tan-grey;
+	color: $tan-grey;
+	border-radius: 5px;
+	padding: 5px 30px;
+	&:focus {
+		outline: 0;
+	}
 	&:hover {
 		border: 2px solid #000 !important;
 		background-color: #000 !important;
