@@ -11,6 +11,9 @@ header {
 }
 a {
 	color: #fff !important;
+	&.here {
+		text-decoration: underline;
+	}
 }
 .navbar-brand {
 	position: absolute;
@@ -32,7 +35,6 @@ a {
     transform: translateY(-50%);
 	left: 110px;
 }
-
 .cart-link {
 	position: absolute;
 	top: 50%;

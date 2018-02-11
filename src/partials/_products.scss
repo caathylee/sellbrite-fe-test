@@ -1,7 +1,7 @@
 #products-page {
 	padding-top: 60px;
 	h2 {
-		
+		color: $dark-grey;
 		padding-bottom: 15px;
 	}
 	.one-item {
@@ -21,20 +21,38 @@
 		}
 		&:hover {
 			border: 2px solid $blue;
-			button {
-				border: 2px solid $blue;
-				color: #fff;
-				background: $blue;
-			}
+		}
+		.img-wrapper {
+			position: relative;
+			overflow: hidden;
 		}
 		.product-image {
+			@extend .transition;
 			width: 100%;
+			&:hover {
+			   -ms-transform: scale(2);
+    			-webkit-transform: scale(2); 
+    			transform: scale(2);
+			}
+		}
+		.name, .price {
+			color: $grey;
 		}
 		.name {
+			font-weight: $light;
 			padding-top: 20px;
+			margin-bottom: 0;
 		}
+		.price {
+			font-size: 20px;
+			margin-bottom: 5px;
+		}
+
 		button {
 			margin-bottom: 20px;
+			&:hover {
+				color: #fff;
+			}
 		}
 	}
 }

@@ -19,10 +19,11 @@ li {
 }
 button {
 	@extend .transition;
-	border: 2px solid $tan-grey;
-	color: $tan-grey;
+	border: 2px solid $grey;
+	color: $dark-grey;
 	border-radius: 5px;
 	padding: 5px 30px;
+	font-weight: $light;
 	&:focus {
 		outline: 0;
 	}
