@@ -4,49 +4,46 @@ class ShoppingCart extends Component {
 	constructor(props) {
 		super(props) 
 		this.state = {
-			total: 0,
-			shouldHide: true
+			total: 0
 		};
-		this.handleClick = this.handleClick.bind(this);
 	}
 
-	handleClick() {
-		console.log(this.props.productsData);
-	}
-	componentWillReceiveProps(nextProps)
-	{
+	calculateTotal() {
 		 var total = 0;
-		 nextProps.shoppingCartData.cartItems.forEach((value1, value2, set) =>
+		 this.props.shoppingCartData.cartItems.forEach((value1, value2, set) =>
 		 {
 		 	total += value1.price;
 		 })
-		 this.setState({
-		 	total: (total/100).toFixed(2)
-		});
+		 this.total = (total/100).toFixed(2);
+	}
+
+	removeItem(product) {
+		this.props.shoppingCartData.cartItems.delete(product);
+		this.setState({});
 	}
 
 	render() {
 		var data = Array.from(this.props.shoppingCartData.cartItems);
-		console.log(this.state.shouldHide);
+		this.calculateTotal();
 		return (
-    	<div className = { "container-fluid " + (this.state.shouldHide?'hidden':'') } id="shopping-cart">
+    	<div className = "container-fluid" id="shopping-cart">
           <div className="container-fluid">
             <div className="cart-items">
             	<h2>Your Cart</h2>
             	<div className="items">
             			{
             				data.map((item, index) =>
-            					<li>
-            						<img className="cropped-product-image" src={require("../images/" + item.filename)} />
+            					<li key={index}>
+            						<img className="cropped-product-image" src={require("../images/" + item.filename)} alt="" />
             						<p className="name">{item.name}</p>
-            						<p className="price">${(item.price/100).toFixed(2)} <span className="btn-close"></span></p>	
+            						<p className="price">${(item.price/100).toFixed(2)} <span className="btn-close" onClick={this.removeItem.bind(this,item)}></span></p>	
             					</li>
             				)
             			}
-            		<p>Nothing in your cart, start shopping.</p>
+            		{data.length <= 0 ? <p>Nothing in your cart, start shopping.</p> : null}
             	</div>
-            	<p className="total-price">Total <span>${this.state.total}</span></p>
-            	<button onClick={this.handleClick}>Back</button>
+            	<p className="total-price">Total <span onClick={this.handleClick}>${this.total}</span></p>
+            	<button onClick={this.props.onBack}>Back</button>
             </div>
           </div>
       </div>

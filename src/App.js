@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
 import ProductsPage from './components/ProductsPage';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -16,7 +15,6 @@ class App extends Component {
     this.setState({
       shoppingCartData: this.shoppingCartData
     });
-    console.log(this.shoppingCartData.cartItems);
   }
 
   render() {
