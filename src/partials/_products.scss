@@ -1,6 +1,7 @@
 #products-page {
+	padding-top: 60px;
 	h2 {
-		padding-top: 20px;
+		
 		padding-bottom: 15px;
 	}
 	.one-item {
@@ -22,6 +23,8 @@
 			border: 2px solid $blue;
 			button {
 				border: 2px solid $blue;
+				color: #fff;
+				background: $blue;
 			}
 		}
 		.product-image {
@@ -36,9 +39,8 @@
 	}
 }
 
-#ShoppingCart {
+#shopping-cart {
 	width: 100%;
-	background: green;
 }
 .cart-items {
 	max-width: 500px;
