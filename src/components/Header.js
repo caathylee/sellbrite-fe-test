@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ShoppingCart from './ShoppingCart';
 
 class Header extends Component {
 	constructor(props) {
@@ -17,6 +18,7 @@ class Header extends Component {
 			      	<a href="#" className="cart-link">Your Cart <span className="item-count">{this.props.shoppingCartData.cartItems.size}</span></a>
 				  </div>
 				</nav>
+				{true ? <ShoppingCart shoppingCartData={this.props.shoppingCartData}/> : null}
 		    </header>
     	)
 	}

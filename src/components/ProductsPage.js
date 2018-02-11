@@ -8,12 +8,7 @@ class ProductsPage extends Component {
 		console.log(this.props);
 		this.props.shoppingCartData.data = data.products;
 		this.props.shoppingCartData.cartItems = new Set();
-		this.props.shoppingCartData.cartEmpty = true;
 
-		/* = {
-			data: data.products,
-			cartItems: new Set()
-		};*/
 		this.handleClick = this.handleClick.bind(this);
 	}
 

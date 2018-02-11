@@ -5,10 +5,7 @@ class ShoppingCart extends Component {
 		super(props) 
 		this.state = {
 			total: 0,
-			calculateTotalPrice: function(){
-				var currentTotal = 0;
-				
-			}
+			shouldHide: true
 		};
 		this.handleClick = this.handleClick.bind(this);
 	}
@@ -16,11 +13,23 @@ class ShoppingCart extends Component {
 	handleClick() {
 		console.log(this.props.productsData);
 	}
-
+	componentWillReceiveProps(nextProps)
+	{
+		 var total = 0;
+		 nextProps.shoppingCartData.cartItems.forEach((value1, value2, set) =>
+		 {
+		 	total += value1.price;
+		 })
+		 this.setState({
+		 	total: (total/100).toFixed(2)
+		});
+	}
+	
 	render() {
-	var data = Array.from(this.props.shoppingCartData.cartItems);
+		var data = Array.from(this.props.shoppingCartData.cartItems);
+		console.log(this.state.shouldHide);
 		return (
-    	<div className="container-fluid" id="shopping-cart">
+    	<div className = { "container-fluid " + (this.state.shouldHide?'hidden':'') } id="shopping-cart">
           <div className="container-fluid">
             <div className="cart-items">
             	<h2>Your Cart</h2>
