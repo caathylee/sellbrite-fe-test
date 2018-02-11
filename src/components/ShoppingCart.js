@@ -24,7 +24,7 @@ class ShoppingCart extends Component {
 		 	total: (total/100).toFixed(2)
 		});
 	}
-	
+
 	render() {
 		var data = Array.from(this.props.shoppingCartData.cartItems);
 		console.log(this.state.shouldHide);
@@ -37,15 +37,15 @@ class ShoppingCart extends Component {
             			{
             				data.map((item, index) =>
             					<li>
-            						<img className="product-image" src={require("../images/" + item.filename)} />
+            						<img className="cropped-product-image" src={require("../images/" + item.filename)} />
             						<p className="name">{item.name}</p>
-            						<p className="price">${(item.price/100).toFixed(2)}</p>	
+            						<p className="price">${(item.price/100).toFixed(2)} <span className="btn-close"></span></p>	
             					</li>
             				)
             			}
             		<p>Nothing in your cart, start shopping.</p>
             	</div>
-            	<p>Total <span>${this.state.total}</span></p>
+            	<p className="total-price">Total <span>${this.state.total}</span></p>
             	<button onClick={this.handleClick}>Back</button>
             </div>
           </div>

@@ -16,7 +16,12 @@ li {
   transition: all 0.3s ease-out; }
 
 button {
-  border: 2px solid #c6b3b3; }
+  border: 2px solid #c6b3b3;
+  color: #c6b3b3;
+  border-radius: 5px;
+  padding: 5px 30px; }
+  button:focus {
+    outline: 0; }
   button:hover {
     border: 2px solid #000 !important;
     background-color: #000 !important; }
@@ -104,14 +109,72 @@ a {
       margin-bottom: 20px; }
 
 #shopping-cart {
-  width: 100%; }
-
-.cart-items {
-  max-width: 500px;
   width: 100%;
-  margin: auto;
-  text-align: center; }
-  .cart-items a {
-    background-color: grey;
-    border-radius: 50%;
-    padding: 5px; }
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.9);
+  position: relative; }
+  #shopping-cart h2, #shopping-cart p {
+    color: #4a4a4a; }
+  #shopping-cart .cart-items {
+    max-width: 300px !important;
+    padding: 0 30px;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -moz-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    -o-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    text-align: center; }
+    #shopping-cart .cart-items .items li {
+      margin-bottom: 25px;
+      position: relative; }
+    #shopping-cart .cart-items a {
+      background-color: grey;
+      border-radius: 50%;
+      padding: 5px; }
+    #shopping-cart .cart-items .name, #shopping-cart .cart-items .price {
+      text-align: right; }
+    #shopping-cart .cart-items .name {
+      font-size: 13px;
+      margin-bottom: 0; }
+    #shopping-cart .cart-items .price {
+      font-size: 18px; }
+    #shopping-cart .cart-items .btn-close {
+      width: 15px;
+      height: 15px;
+      display: block;
+      background: url("./images/btn-close.png") no-repeat center center;
+      background-size: contain;
+      position: absolute;
+      right: -18px;
+      top: 0; }
+  #shopping-cart .cropped-product-image {
+    border: 2px solid #979797;
+    width: 50px;
+    height: 50px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    float: left; }
+  #shopping-cart .total-price {
+    font-size: 20px;
+    position: relative;
+    padding-top: 20px;
+    margin-bottom: 40px; }
+    #shopping-cart .total-price:before {
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: #4a4a4a;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0; }
+  #shopping-cart button:hover {
+    background-color: #0b00d0;
+    color: #fff; }
